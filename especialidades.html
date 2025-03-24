@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MediScam - Clínica médica com diversas especialidades para cuidar da sua saúde">
+  <title>MediScam - Saúde Integral</title>
+  <link rel="icon" href="./img/MEDISCAM-LOGO.webp" type="image/webp">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="./img/MEDISCAM-LOGO.webp" alt="MediScam" width="502" height="392" loading="lazy">
+        <span class="logo-text">MediScam</span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <button class="menu-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
+          aria-expanded="false">
+          <span class="hamburger"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="specialties-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Nossas Especialidades</h1>
+          <p>Conheça nossa equipe médica e as especialidades que oferecemos</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="specialties-list">
+      <div class="container">
+        <!-- Card de Cardiologia -->
+        <article class="specialty-card">
+          <div class="specialty-image">
+            <img src="./img/CARDIOLOGISTA-CONSULTANDO-PACIENTE.webp" alt="Cardiologista examinando paciente"
+              loading="lazy" width="400" height="300">
+          </div>
+          <div class="specialty-info">
+            <h2>Cardiologia</h2>
+            <p>Especialidade médica que se ocupa do diagnóstico e tratamento das doenças que acometem o coração e os
+              outros componentes do sistema circulatório.</p>
+
+            <div class="specialty-doctors">
+              <h3>Médicos Responsáveis</h3>
+              <ul>
+                <li>Dr. Carlos Mendes <span>- CRM/SP 12345</span></li>
+                <li>Dra. Ana Paula Oliveira <span>- CRM/SP 67890</span></li>
+              </ul>
+            </div>
+
+            <a href="contato.html" class="btn">Agendar Consulta</a>
+          </div>
+        </article>
+
+        <!-- Card de Ortopedia -->
+        <article class="specialty-card">
+          <div class="specialty-image">
+            <img src="./img/ORTOPEDISTA-EXAMINANDO-JOELHO.webp" alt="Ortopedista examinando joelho" loading="lazy"
+              width="400" height="300">
+          </div>
+          <div class="specialty-info">
+            <h2>Ortopedia</h2>
+            <p>Especialidade médica que cuida da saúde relacionadas aos elementos do aparelho locomotor, como ossos,
+              músculos, ligamentos e articulações.</p>
+
+            <div class="specialty-doctors">
+              <h3>Médicos Responsáveis</h3>
+              <ul>
+                <li>Dr. Roberto Almeida <span>- CRM/SP 54321</span></li>
+                <li>Dra. Fernanda Costa <span>- CRM/SP 09876</span></li>
+              </ul>
+            </div>
+
+            <a href="contato.html" class="btn">Agendar Consulta</a>
+          </div>
+        </article>
+
+        <!-- Card de Dermatologia -->
+        <article class="specialty-card">
+          <div class="specialty-image">
+            <img src="./img/DERMATOLOGISTA-ANALISANDO-PELE.webp" alt="Dermatologista examinando pele" loading="lazy"
+              width="400" height="300">
+          </div>
+          <div class="specialty-info">
+            <h2>Dermatologia</h2>
+            <p>Especialidade médica que se ocupa do diagnóstico, prevenção e tratamento de doenças e afecções
+              relacionadas à pele, pelos, mucosas, cabelos e unhas.</p>
+
+            <div class="specialty-doctors">
+              <h3>Médicos Responsáveis</h3>
+              <ul>
+                <li>Dra. Juliana Santos <span>- CRM/SP 13579</span></li>
+                <li>Dr. Marcelo Lima <span>- CRM/SP 24680</span></li>
+              </ul>
+            </div>
+
+            <a href="contato.html" class="btn">Agendar Consulta</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <img src="./img/MEDISCAM-LOGO.webp" alt="MediScam" width="150" height="40">
+        <p>Se o SUS não te atende, a gente te engana!</p>
+      </div>
+      <div class="footer-links">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="devs.html">Conheça os Devs</a></li>
+        </ul>
+      </div>
+      <div class="footer-contato">
+        <h3>Contato</h3>
+        <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+        <p><i class="fas fa-envelope"></i> contato@mediscam.com</p>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <div class="container">
+        <p>&copy; 2023 MediScam. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

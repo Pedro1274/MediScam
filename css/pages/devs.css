@@ -1,0 +1,194 @@
+/* Seção Devs */
+.devs-main {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.devs-hero {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(26, 26, 26, 0.85)),
+        url('../../img/DEVS-BACKGROUND.webp') no-repeat center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+}
+
+.devs-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Team Section */
+.team-section {
+    padding: 60px 0;
+}
+
+.team-container,
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Dev Cards */
+.dev-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.dev-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dev-photo {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    margin: -25px -25px 20px -25px;
+    /* Alinha com o card padding */
+}
+
+.dev-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dev-card:hover .dev-photo img {
+    transform: scale(1.05);
+}
+
+.dev-social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.dev-card:hover .dev-social {
+    transform: translateY(0);
+}
+
+.dev-social a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.dev-social a:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.dev-info {
+    padding: 0 5px;
+}
+
+.dev-role {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.dev-bio,
+.dev-contributions {
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.dev-contributions {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.dev-contributions li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.dev-contributions li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Tech Stack */
+.tech-stack {
+    background: var(--white-dark);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tech-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tech-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover i {
+    transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .devs-hero {
+        padding: 80px 0;
+    }
+
+    .team-container,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,14 @@
+/* style.css */
+/* Base */
+@import './base/base.css';
+
+/* Componentes */
+@import './components/footer.css';
+@import './components/header.css';
+@import './components/location-map.css';
+
+/* Páginas */
+@import './pages/index.css';
+@import './pages/contact.css';
+@import './pages/specialties.css';
+@import './pages/devs.css';

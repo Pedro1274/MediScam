@@ -1,0 +1,199 @@
+/* Header */
+.header {
+    background-color: var(--black);
+    box-shadow: 0 4px 12px var(--primary-dark);
+    border-bottom: var(--gold-border);
+    transition: all 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+.header.scrolled {
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.logo-text {
+    font-family: var(--font-accent);
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: var(--gold-text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+.logo-text:hover {
+    background: var(--gold-text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.menu li {
+    margin-left: 30px;
+}
+
+.menu a {
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+    display: inline-block; /* Adicione isso para conter o pseudo-elemento */
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajuste a posição do underline */
+    width: 0; /* Começa sem largura */
+    height: 2px; /* Espessura do underline */
+    background-color: var(--primary-color); /* Cor do underline */
+    transition: width 0.3s ease; /* Animação suave */
+}
+
+.menu a:hover {
+    color: var(--primary-color);
+}
+
+.menu a:hover::after {
+    width: 100%; /* Expande o underline ao passar o mouse */
+}
+
+.menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1100;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    left: 0;
+    transition: all 0.3s;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+.menu-mobile.active .hamburger {
+    background-color: transparent;
+}
+
+.menu-mobile.active .hamburger::before {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-mobile.active .hamburger::after {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Screen Reader Only Text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .menu {
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 80px);
+      background-color: var(--white);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: left 0.3s;
+      gap: 30px;
+    }
+    
+    .menu.active {
+      left: 0;
+    }
+    
+    .menu a {
+      color: var(--black);
+      font-size: 1.2rem;
+    }
+    
+    .menu-mobile {
+      display: block;
+    }
+}
+
+/* Grids responsivos */
+@media (max-width: 576px) {
+    .servicos-grid,
+    .depoimentos-grid {
+      grid-template-columns: 1fr;
+    }
+}

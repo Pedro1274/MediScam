@@ -1,0 +1,202 @@
+/* Seção Index */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)),
+                url('../../img/MEDISCAM-INDEX-BACKGROUND-IMG.webp') no-repeat center/cover;
+    border-bottom: var(--gold-border);
+    text-align: center;
+    padding: 180px 0 100px;
+    margin-top: 80px; /* Compensa a altura do header fixo */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gold-gradient);
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 0.8s ease-out;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsivo com clamp() */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+
+    font-family: var(--font-accent);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    margin-bottom: 25px;
+    color: var(--white);
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: var(--primary-color);
+}
+
+.btn-hero {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 16px 40px;
+    border-radius: 50px;
+    box-shadow: var(--gold-shadow);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Seção de Serviços */
+.services {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    line-height: 1.6;
+}
+
+/* Seção de Depoimentos */
+.testimonials {
+    padding: 4rem 0;
+    background-color: var(--white);
+}
+
+.testimonials .section-title {
+    margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    font-size: 5rem;
+    color: rgba(212, 175, 55, 0.1);
+    /* Dourado com transparência */
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    line-height: 1;
+    z-index: 0;
+    font-family: var(--font-accent);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: var(--gray-dark);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--gold);
+    font-style: normal;
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero {
+      padding: 120px 0 80px;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 576px) {
+    .hero {
+      padding: 150px 0 80px;
+    }
+    
+    .page-header h1 {
+      font-size: 2rem;
+    }
+}

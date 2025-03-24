@@ -1,0 +1,143 @@
+/* Reset e Base */
+:root {
+    /* Cores Principais Douradas */
+    --primary-color: #D4AF37;
+    /* Dourado clássico */
+    --primary-dark: #B8860B;
+    /* Dourado escuro */
+    --primary-light: #FFD700;
+    /* Dourado claro */
+
+    /* Cores Secundárias */
+    --secondary-color: #7A6A5F;
+    /* Bronze */
+
+    /* Neutros Sofisticados */
+    --black: #1A1A1A;
+    --white: #F8F8F8;
+    --gray: #8E8E8E;
+
+    /* Cores de Apoio */
+    --danger-color: #C21807;
+    /* Vermelho terroso */
+    --success-color: #2E8B57;
+    /* Verde floresta */
+    --info-color: #4169E1;
+    /* Azul royal */
+
+    /* Tipografia */
+    --font-main: 'Montserrat', sans-serif;
+    --font-accent: 'Playfair Display', serif;
+    /* Opcional para títulos */
+
+    /* Efeitos Dourados */
+    --gold-gradient: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 50%, var(--primary-dark) 100%);
+    --gold-text-gradient: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+    --gold-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--black);
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Estilos para validação */
+.error-message {
+    color: var(--danger-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+input.error,
+select.error,
+textarea.error {
+    border-color: var(--danger-color);
+    background-color: rgba(194, 24, 7, 0.05);
+}
+
+.success-message {
+    background-color: rgba(46, 139, 87, 0.1);
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.success-message i {
+    font-size: 1.5rem;
+}

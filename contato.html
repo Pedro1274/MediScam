@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MediScam - Clínica médica com diversas especialidades para cuidar da sua saúde">
+  <title>MediScam - Saúde Integral</title>
+  <link rel="icon" href="./img/MEDISCAM-LOGO.webp" type="image/webp">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="./img/MEDISCAM-LOGO.webp" alt="MediScam" width="502" height="392" loading="lazy">
+        <span class="logo-text">MediScam</span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <button class="menu-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu"
+          aria-expanded="false">
+          <span class="hamburger"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul class="menu" id="menu">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Contato e Agendamento</h1>
+          <p>Entre em contato conosco ou agende sua consulta</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Formulário de Agendamento -->
+          <div class="contact-form">
+            <h2><i class="fas fa-calendar-alt"></i> Agendamento Online</h2>
+            <form id="appointment-form">
+              <div class="form-group">
+                <label for="name">Nome Completo</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required
+                  placeholder="Ex: João da Silva"
+                  aria-describedby="name-help"
+                >
+              </div>              
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                    placeholder="seu@email.com"
+                    aria-describedby="email-help"
+                  >
+                </div>
+              
+                <div class="form-group">
+                  <label for="phone">Telefone</label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    required
+                    placeholder="(00) 00000-0000"
+                    pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                    aria-describedby="phone-help"
+                  >
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="specialty">Especialidade</label>
+                  <select id="specialty" name="specialty" required>
+                    <option value="">Selecione</option>
+                    <option value="cardiology">Cardiologia</option>
+                    <option value="orthopedics">Ortopedia</option>
+                    <option value="dermatology">Dermatologia</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="date">Data Preferencial</label>
+                  <input type="date" id="date" name="date" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="4"
+                  placeholder="Descreva brevemente sua necessidade (máx. 500 caracteres)"
+                  aria-describedby="message-help"
+                  maxlength="500"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-submit">
+                <i class="fas fa-paper-plane"></i> Enviar Agendamento
+              </button>
+            </form>
+          </div>
+
+          <!-- Informações de Contato -->
+          <div class="contact-info">
+            <h2><i class="fas fa-info-circle"></i> Informações</h2>
+
+            <div class="info-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Endereço</h3>
+                <address>
+                  Rua das Clínicas, 123 - Centro<br>
+                  São Paulo/SP - CEP 01234-567
+                </address>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Telefone</h3>
+                <p><a href="tel:+551112345678">(11) 1234-5678</a></p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/5511987654321">(11) 98765-4321</a></p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>E-mail</h3>
+                <p><a href="mailto:contato@mediscam.com">contato@mediscam.com</a></p>
+              </div>
+            </div>
+
+            <div class="social-media">
+              <h3>Redes Sociais</h3>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="location">
+      <div class="container">
+        <h2><i class="fas fa-map-marked-alt"></i> Nossa Localização</h2>
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.6534265844076!3d-23.56573436763838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1622671024451!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0" allowfullscreen loading="lazy"
+            title="Localização da Clínica MediScam no mapa"
+            aria-label="Mapa interativo mostrando a localização da clínica">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <img src="./img/MEDISCAM-LOGO.webp" alt="MediScam" width="150" height="40">
+        <p>Se o SUS não te atende, a gente te engana!</p>
+      </div>
+      <div class="footer-links">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="especialidades.html">Especialidades</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="devs.html">Conheça os Devs</a></li>
+        </ul>
+      </div>
+      <div class="footer-contato">
+        <h3>Contato</h3>
+        <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+        <p><i class="fas fa-envelope"></i> contato@mediscam.com</p>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <div class="container">
+        <p>&copy; 2023 MediScam. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
