@@ -16,7 +16,7 @@
 - ✅ Lazy Loading de imagens
 - ✅ CSS minificado
 - ✅ Acessibilidade (ARIA)
-- ✅ Desktop-First
+- ✅ Mobile-first
 
 ## 🛠 Como Executar
 

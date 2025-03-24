@@ -163,6 +163,7 @@
 /* Tablet */
 @media (max-width: 768px) {
     .menu {
+      z-index: 1001;
       position: fixed;
       top: 80px;
       left: -100%;
