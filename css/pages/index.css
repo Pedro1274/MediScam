@@ -121,6 +121,70 @@
     line-height: 1.6;
 }
 
+/* Seção de Médicos */
+.doctors {
+    padding: 4rem 0;
+    background-color: var(--background, #f9f9f9);
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.doctor-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.doctor-img-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.25rem;
+    border: 3px solid var(--primary-color, #d4af37);
+}
+
+.doctor-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-name {
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+    color: var(--gray-dark, #333);
+}
+
+.doctor-specialty {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gold, #d4af37);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.doctor-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--gray-dark, #555);
+}
+
 /* Seção de Depoimentos */
 .testimonials {
     padding: 4rem 0;
